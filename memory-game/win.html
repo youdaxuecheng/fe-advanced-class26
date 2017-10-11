@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Winner!!!!</title>
+  <meta name="description" content="">
+  <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Oxygen">
+  <link rel="stylesheet" href="css/win.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="win">
+    <i class="fa fa-check-circle" aria-hidden="true"></i>
+    <p class="message"> Congratulations! </p>
+    <p class="message"> You Won! </p>
+    <p class='count'> </p>
+    <script>
+      $(document).ready(function() {
+        let url = document.URL;
+        let idx1 = url.indexOf('?moves=');
+        let idx2 = url.indexOf('&stars=');
+        let idx3 = url.indexOf('&timer=');
+        let moves, stars, timer;
+
+        if (idx1 !== -1) {
+          moves = url.substring(idx1 + 7, idx2);
+        }
+
+        if (idx2 !== -1) {
+          stars = url.substring(idx2 + 7, idx3);
+        }
+
+        if (idx3 !== -1) {
+          timer = url.substring(idx3 + 7, url.length);
+        }
+
+        $('.count').html(`With ${moves} Moves and ${stars} Stars in ${timer} time`);
+      });
+    </script>
+    <p class="woo"> Woooooooo! </p>
+    <form>
+      <input type="button" value="Play Again" onclick="window.location.href='index.html';" class="myButton">
+    </form>
+  </div>
+</body>
+
+</html>

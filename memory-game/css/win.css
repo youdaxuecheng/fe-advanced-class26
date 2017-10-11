@@ -1,0 +1,66 @@
+body {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  height: 2em;
+  margin-top: -1em;
+  width: 40%;
+  margin-left: -20%;
+  line-height: 2em;
+  text-align: center;
+  font-family: "Oxygen", sans-serif;
+}
+
+.fa {
+  font-size: 60px;
+  color: green;
+}
+
+.win {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+}
+
+.message {
+  color: #565a60;
+  font-size: 35px;
+}
+
+.count,
+.woo {
+  font-size: 20px;
+  color: #0567bc;
+  margin: 0.25em;
+}
+
+.woo {
+  color: #ef8d04;
+  font-weight: bold;
+}
+
+.myButton {
+  background-color: #3cd8d3;
+  border: none;
+  color: #fff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 2em;
+}
+
+@media screen and (max-width: 750px) {
+  .fa {
+      font-size: 60px;
+  }
+  .message .woo {
+      font-size: 60px;
+  }
+  .myButton {
+      font-size: 30px;
+  }
+}

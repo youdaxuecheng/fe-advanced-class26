@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Scoreboard!</title>
+  <meta name="description" content="">
+  <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Oxygen">
+  <link rel="stylesheet" href="css/score.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1> Score Board </h1>
+    </header>
+    <table class="scoreboard">
+      <script>
+        $(document).ready(function() {
+          localStorage.name = "score";
+          var output = "";
+          const scoreCardKeys = ["score1", "score2", "score3", "score4", "score5"];
+          output += `<tr> <th> S.No </th> <th> Level </th> <th> Moves </th> <th> Time </th> </tr>`;
+          if (localStorage) {
+            if (localStorage.length > 0) {
+              for (let i = 0; i < 5; i++) {
+                let scoreObj = localStorage.getItem(scoreCardKeys[i]);
+                if (scoreObj !== null) {
+                  let idx1 = scoreObj.indexOf(",");
+                  let idx2 = scoreObj.lastIndexOf(",");
+                  let level = scoreObj.substring(0, idx1);
+                  let moves = scoreObj.substring(idx1 + 1, idx2);
+                  let time = scoreObj.substring(idx2 + 1, scoreObj.length);
+                  output += `<tr> <td> ${i+1} </td> <td> ${level} </td> <td> ${moves} </td>  <td> ${time} </td> </tr>`;
+                }
+              }
+            }
+          }
+          $(".scoreboard").html(output);
+        });
+      </script>
+    </table>
+    <form>
+      <input type="button" value="Go Back" onclick="window.location.href='index.html';" class="myButton">
+    </form>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h1 {
+  font-size: 40px;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+}
+table {
+  display: inline-block;
+  table-layout: fixed;
+}
+table,
+th,
+td {
+  border: 1px dotted grey;
+  border-radius: 6px;
+  border-spacing: .5px;
+  width: 350px;
+  justify-content: center;
+}
+th {
+  height: 20px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #42d9f4;
+  padding: 10px;
+}
+td {
+  font-size: 17px;
+  height: 20px;
+  padding: 5px;
+}
+.myButton {
+  background-color: #42d9f4;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  margin: 30px 15px;
+  padding: 15px 32px;
+}

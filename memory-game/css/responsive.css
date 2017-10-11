@@ -1,0 +1,82 @@
+@media screen and (max-width: 750px) {
+  .container {
+      width: 250px;
+      display: block;
+      margin: auto;
+      box-sizing: border-box;
+  }
+  h1 {
+      font-size: 20px;
+  }
+  .container .topnav {
+      width: 235px;
+      height: 25px;
+      display: flex;
+  }
+  .topnav .dropbtn {
+      font-size: 10px;
+      margin: 0 20px 0 10px;
+      padding: 5px 5px 0 5px;
+  }
+  .topnav a {
+      margin: 5px;
+      padding: 0;
+      font-size: 10px;
+  }
+  .container .topnav a:last-child {
+      margin: 0 10px 0 10px;
+      padding: 5px 5px 0 5px;
+  }
+  .container a:hover,
+  .dropdown:hover {
+      background-color: #f4424b;
+  }
+  .container .topnav .scoreboard:hover {
+      background-color: #f4424b;
+  }
+  .container .dropdown-content {
+      min-width: 78px;
+      min-height: 40px;
+      padding-bottom: 5px;
+      margin-top: 0;
+      padding-top: 0;
+  }
+  .container .topnav .level {
+      margin: 5px;
+      padding: 5px;
+  }
+  .container .topnav .level:last-child {
+      margin: 5px;
+      padding: 5px;
+  }
+  .container .score-panel {
+      width: 275px;
+      margin: 0;
+      padding: 0;
+  }
+  .container .deck {
+      width: 232px;
+      min-height: 100px;
+      margin: 10px;
+      /*margin-left: 17px;*/
+      /*margin: 0 auto;*/
+  }
+  .deck .card {
+      width: 50px;
+      height: 50px;
+      margin: 4px;
+      padding: 2px;
+  }
+  .container .score-panel {
+      font-size: 10px;
+      width: 225px;
+      margin: 10px 0;
+  }
+  .score-panel .stars {
+      margin: 0 5px 0 5px;
+  }
+  .container .score-panel .timer {
+      margin-right: 0;
+      padding-right: 0;
+  }
+}
