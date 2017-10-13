@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>创建对象和工厂模式</title>
+</head>
+
+<body>
+    <script>
+        //构造函数创建对象Person
+        function Person(name,age,job){
+            this.name = name
+            this.age = 20;
+            this.job = "Web Developer";
+            this.sayName = function () {
+                alert(this.name);
+            }
+        }
+
+
+        var person1=new Person('Mike',20,'Back-End developer');
+        var person2=new Person('Jim',22,'Front-End Developer');
+
+        person1.sayName();
+        person2.sayName();
+
+        console.log(person1.sayName==person2.sayName);//判断对象实例2个函数是否相同
+    </script>
+</body>
+
+</html>
